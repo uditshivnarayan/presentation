@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,600;0,800;1,100;1,300;1,600;1,800&display=swap');
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    text-transform: lowercase;
+}
+.typewriter-text {
+    overflow: hidden; /* Ensures the text is initially hidden */
+    border-right: 0.15em solid orange; /* Creates the blinking cursor */
+    white-space: nowrap; /* Prevents text from wrapping */
+    margin: 0; /* Resets default margin */
+    letter-spacing: 0.15em; /* Adjust letter spacing for a typewriter effect */
+    animation: typing 3s steps(35), blink-caret 0.75s infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 40%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
+
+section {
+    display: grid;
+    align-items: center;
+    place-items: center;
+    min-height: 100vh;
+}
+h1{
+    text-align: center;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(-100%);
+    transition: all 3s;
+    }
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    }
+.list_image_container{
+    display: flex;
+}
+.list{
+    width: 40%;
+}
+.image{
+    width: 60%;
+    justify-content: space-evenly;
+}
+.image svg{
+    padding-right:20px;
+}
+.image img{
+    height: 250px;
+}
+.link{
+    text-decoration: none;
+}
+.link button{
+    width: 200px;
+    height: 50px;
+    border: solid white;
+    color: white;
+    font-weight: bold;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.link button:hover{
+    background-color: orange;
+    border: solid orange;
+}
